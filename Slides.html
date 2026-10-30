@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="km" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>អក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន - ធាតុទាំង ៥</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Kantumruy Pro"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .slide { display: none; }
+        .slide.active { display: flex; }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+    <!-- Top Navigation Header -->
+    <header class="w-full bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center space-x-3">
+            <button onclick="toggleMenu()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition" title="មាតិកា">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            <h1 class="text-lg font-bold text-indigo-600 dark:text-indigo-400">អក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន</h1>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span id="slide-counter" class="text-sm font-medium text-slate-500 dark:text-slate-400">ទំព័រ ၁ / ៦</span>
+            <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition" title="ប្តូរពណ៌ទម្រង់">
+                <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Slide Container -->
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 max-w-5xl mx-auto w-full">
+
+        <!-- Slide 1: Cover & Intro -->
+        <div class="slide active flex-col w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 min-h-[450px] justify-between">
+            <div>
+                <span class="inline-block bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">មេរៀនទី ១</span>
+                <h2 class="text-2xl sm:text-3xl font-bold mb-6 leading-relaxed">ធាតុទាំង ៥ នៃអក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន</h2>
+                <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    ការយល់ដឹងពីមូលដ្ឋានគ្រឹះ និងជំនាញក្នុងការស្វែងរក វិភាគ បង្កើត និងវាយតម្លៃលើព័ត៌មាននិងប្រព័ន្ធផ្សព្វផ្សាយ។
+                </p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
+                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">១. ការចេះប្រើប្រាស់</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    គឺជាជំហានដំបូងនៃការអក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន ដែលផ្តោតលើការរៀនស្វែងរក និងយល់ដឹងអំពីសារនៅលើប្រព័ន្ធផ្សព្វផ្សាយ និងវិធីប្រើប្រាស់បច្ចេកវិទ្យាប្រព័ន្ធផ្សព្វផ្សាយផ្សេងៗ។
+                </p>
+            </div>
+        </div>
+        <!-- Slide 2: Element 1 (Use) & Sub-points -->
+        <div class="slide flex-col w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 min-h-[450px] justify-between">
+            <div>
+                <span class="inline-block bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">ធាតុទី ១ (ត)</span>
+                <h2 class="text-2xl font-bold mb-4">១.២ - ស្វែងរកព័ត៌មាន លើអ៊ីនធឺណិតតាមរយៈទូរស័ព្ទ</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    ការស្វែងរកឃើញព័ត៌មាននៅលើអ៊ីនធឺណិតតម្រូវឲ្យអ្នកមានជំនាញក្នុងការប្រើប្រាស់បច្ចេកវិទ្យា។ អ្នកត្រូវដឹងថា តើពាក្យគន្លឹះណាដែលត្រឹមត្រូវសម្រាប់វាយចូលទៅកាន់ម៉ាស៊ីនស្វែងរកព័ត៌មាន។
+                </p>
+                <div class="space-y-3">
+                    <div class="p-3 bg-indigo-50 dark:bg-indigo-950/40 rounded-lg border-l-4 border-indigo-500">
+                        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <strong>គោលបំណង៖</strong> ដើម្បីស្វែងយល់ឱ្យដឹងអំពីជម្រើសសមត្ថភាពក្នុងការប្រើប្រាស់កម្មវិធីផ្សេងៗ លើអ៊ីនធឺណិត ព័ត៌មាន និងកម្មវិធីកុំព្យូទ័រ។
+                        </p>
+                    </div>
+                    <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-lg border-l-4 border-amber-500">
+                        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                            <strong>ចំណាំ៖</strong> ពុំមាននរណាម្នាក់មានជំនាញអាចចេះប្រើប្រាស់ប្រព័ន្ធផ្សព្វផ្សាយនិងព័ត៌មានគ្រប់ប្រភេទនោះទេ វាជាដំណើរការរៀនសូត្រជាបន្តបន្ទាប់។
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Element 2 (Understand & Analyze) -->
+        <div class="slide flex-col w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 min-h-[450px] justify-between">
+            <div>
+                <span class="inline-block bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">ធាតុទី ២</span>
+                <h2 class="text-2xl font-bold mb-4">២. ការវិភាគ (Understand & Analyze)</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    ការចេះវិភាគព័ត៌មាន គឺជាជំហានទីពីរនៃអក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន។ បុគ្គលម្នាក់ដែលមានជំនាញវិភាគសារប្រព័ន្ធផ្សព្វផ្សាយ គឺមានសមត្ថភាពចេះបកស្រាយអត្ថន័យ វាយតម្លៃ ប្រភេទទម្រង់សារទាំងលើឯកសារបោះពុម្ព និងឌីជីថល។
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div class="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-600">
+                        <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">១.៣- ការវិភាគព័ត៌មានដែលទទួលបាន</strong>
+                        <p class="text-slate-600 dark:text-slate-300">ការត្រួតពិនិត្យប្រភព គោលបំណងរបស់អ្នកនិពន្ធ និងភាពត្រឹមត្រូវនៃព័ត៌មាន។</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-600">
+                        <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">ការចោទសួរ</strong>
+                        <p class="text-slate-600 dark:text-slate-300">ការចេះសួរសំណួរល្អៗ ដើម្បីលើកកម្ពស់ជំនាញគិតស៊ីជម្រៅលើសារប្រព័ន្ធផ្សព្វផ្សាយ។</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 4: Element 3 (Create) & Element 4 (Evaluate) -->
+        <div class="slide flex-col w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 min-h-[450px] justify-between">
+            <div>
+                <span class="inline-block bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">ធាតុទី ៣ និងទី ៤</span>
+                <div class="space-y-4">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">៣. ការបង្កើត (Create)</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            ការបង្កើតគឺជាជំហានទីបីនៃអក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន។ បច្ចុប្បន្ននេះ អ្នកអាចប្រើប្រាស់ឧបករណ៍ឌីជីថលដូចជាកុំព្យូទ័រ ឬទូរស័ព្ទដៃ ដើម្បីបង្កើតអត្ថបទ សំឡេង រូបភាព វីដេអូ ឬកម្មវិធីប្រព័ន្ធផ្សព្វផ្សាយផ្សេងៗប្រកបដោយក្រមសីលធម៌ និងការទទួលខុសត្រូវ។
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
+                        <h2 class="text-xl font-bold mb-2">៤. ការបញ្ចុះបញ្ចូល (Evaluate / Assess & Reflect)</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            ការបញ្ចុះបញ្ចូលគឺជាជំហានទីបួន ដែលទាមទារការគិតគូរទូលំទូលាយអំពីផលប៉ះពាល់ និងការលើកកម្ពស់ទំនាក់ទំនងប្រកបដោយក្រមសីលធម៌ និងការគោរពគ្នា។
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 5: Element 5 (Self-Evaluation & Ethics) -->
+        <div class="slide flex-col w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 min-h-[450px] justify-between">
+            <div>
+                <span class="inline-block bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">ធាតុទី ៥</span>
+                <h2 class="text-2xl font-bold mb-4">៥. ការតម្រូវខ្លួន (Self-Evaluation / Ethics)</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    ការតម្រូវខ្លួនគឺជាជំហានចុងក្រោយនៃអក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន ដែលផ្តោតលើការពិនិត្យមើលខ្លួនឯង ការគោរពសិទ្ធិអ្នកដទៃ ក្រមសីលធម៌ និងការទទួលខុសត្រូវខ្ពស់ពេលប្រើប្រាស់ប្រព័ន្ធផ្សព្វផ្សាយ។
+                </p>
+                <div class="p-4 bg-indigo-50 dark:bg-indigo-950/40 rounded-xl border border-indigo-200 dark:border-indigo-800">
+                    <p class="text-xs sm:text-sm text-indigo-900 dark:text-indigo-200 leading-relaxed">
+                        <strong>សេចក្តីសន្និដ្ឋាន៖</strong> ការយល់ដឹងស៊ីជម្រៅលើធាតុទាំង ៥ នេះជួយឱ្យយើងក្លាយជាพลเมืองឌីជីថល (Digital Citizen) ដែលមានការគិតពិចារណាខ្ពស់ មានសុវត្ថិភាព និងចេះរួមចំណែកអភិវឌ្ឍសង្គមដោយការទទួលខុសត្រូវ។
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Control Navigation Bar -->
+    <footer class="w-full bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 px-6 py-4 flex justify-between items-center shadow-lg">
+        <button onclick="prevSlide()" id="prev-btn" class="px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-xl text-sm font-medium transition disabled:opacity-50">
+            មុន
+        </button>
+        <span id="slide-indicator" class="text-xs font-semibold text-slate-500 dark:text-slate-400">ទំព័រ ១ នៃ ៥</span>
+        <button onclick="nextSlide()" id="next-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-medium transition">
+            បន្ទាប់
+        </button>
+    </footer>
+
+    <!-- Slide Table of Contents Drawer Menu -->
+    <div id="menu-drawer" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex justify-start">
+        <div class="bg-white dark:bg-slate-800 w-80 h-full p-6 shadow-2xl flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-lg text-indigo-600 dark:text-indigo-400">មាតិកាមេរៀន</h3>
+                    <button onclick="toggleMenu()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <button onclick="goToSlide(0); toggleMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium">១. សេចក្តីផ្តើម & ធាតុទី១</button>
+                    <button onclick="goToSlide(1); toggleMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium">២. ធាតុទី ១.២ (ស្វែងរក)</button>
+                    <button onclick="goToSlide(2); toggleMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium">៣. ធាតុទី ២ (វិភាគ)</button>
+                    <button onclick="goToSlide(3); toggleMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium">៤. ធាតុទី ៣ & ៤ (បង្កើត និងបញ្ចុះបញ្ចូល)</button>
+                    <button onclick="goToSlide(4); toggleMenu();" class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium">៥. ធាតុទី ៥ (តម្រូវខ្លួន)</button>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 text-center">អក្ខរកម្មប្រព័ន្ធផ្សព្វផ្សាយ និងព័ត៌មាន</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Controllers -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            document.getElementById('slide-counter').innerText = `ទំព័រ ${currentSlide + 1} / ${totalSlides}`;
+            document.getElementById('slide-indicator').innerText = `ទំព័រ ${currentSlide + 1} នៃ ${totalSlides}`;
+            document.getElementById('prev-btn').disabled = currentSlide === 0;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlides();
+        }
+
+        function toggleMenu() {
+            const drawer = document.getElementById('menu-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        updateSlides();
+    </script>
+</body>
+</html>
